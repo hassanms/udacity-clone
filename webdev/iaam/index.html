@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1 style="text-align: center;">4. Identity and Access Management</h1>
+
+	<h2>Lesson 1: Foundation</h2>
+
+	<hr>
+
+	<h2>1. Course Intro</h2>
+
+	<h3>The building blocks of a secure system</h3>
+
+	<iframe width="720" height="480" src="https://www.youtube.com/embed/fDe1k499NNk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+	<div>
+		<h4>This course will cover</h4>
+		<ul>
+			<li>Authentication systems - design, implementation, and use of third party services.</li>
+			<li>Common vulnerabilities while working with passwords and how to avoid these pitfalls.</li>
+			<li>Authorization systems - design and implementation for backend and frontend.</li>
+			<li>Basic security best practices and key principals to keep in mind.</li>
+		</ul> 
+		
+		<h4>Prerequisite expectations</h4>
+		
+		<p>We expect that you have pre-existing knowledge in the following areas. We've included a few Recap concepts to help refresh your memory for this course.</p>
+
+		<ul>
+			<li>Basic frontend or backend implementation (e.g. Javascript/HTML/Python/Flask)</li>
+			<li>Network communication (i.e., HTTP)</li>
+			<li>Structured Query Language (SQL) using SQLAlchemy</li>
+			<li>API Development (REST)</li>
+		</ul> 
+		
+		<h4>This course will not cover</h4>
+		<ul>
+			<li>Advanced security principals.</li>
+			<li>Penetration testing, red teaming, vulnerability detection.</li>
+			<li>"Hacking" and tools and systems to perform nefarious actions.</li>
+			<li>DevOps, Deployments, Scaling or maintaining these systems in the cloud</li>
+		</ul> 
+	</div>
+
+	<hr>
+
+	<h2>2. Recap - HTTP, Flask, and Postman</h2>
+
+	<h3>Flask API Server Recap</h3>
+
+	<p>Recap - The material covered in this concept is a refresher and should not be new. If you've never seen this material before, it may be wise to look back on a previous course on Python, API Development or Flask.</p>
+
+	<h4>HTTP Request-Response Handling</h4>
+
+	<iframe width="720" height="480" src="https://www.youtube.com/embed/bX7kKwoO4pc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+	<h4>HTTP Status Codes</h4>
+
+	<p>Two status codes which are important throughout this course are:</p>
+
+	<ul>
+		<li>401 Unauthorized</li>
+		<p>The client must pass authentication before access to this resource is granted. The server cannot validate the identity of the requested party.</p>
+		<li>403 Forbidden</li>
+		<p>The client does not have permission to access the resource. Unlike 401, the server knows who is making the request, but that requesting party has no authorization to access the resource.</p>
+	</ul>
+
+	<p>For a complete list of status codes, check out the <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status">MDN Web Docs</a></p>
+
+	<h4>Flask - A Python Framework for Server Development</h4>
+
+	<p>Flask is a popular framework for developing "microservices" or "small-in-scope" web servers. It provides all of the interfaces for you to build an HTTP server out of the box with little boilerplate. Check out the <a href="http://flask.pocoo.org/">Flask docs</a> to learn more.</p>
+
+	<p>We'll be using code available in the FSND repo. Follow along <a href="https://github.com/udacity/FSND/tree/master/FlaskRecap">here</a>.</p>
+
+	<iframe width="720" height="480" src="https://www.youtube.com/embed/vE1dF_bsiRw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+	<h4>Postman - HTTP API Development GUI</h4>
+
+	<p>Postman provides useful tools to help you develop and test APIs. You can download and learn more at <a href="https://www.getpostman.com/">Postman's website.</a></p>
+
+	<iframe width="720" height="480" src="https://www.youtube.com/embed/AnPFYzLpRKE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+	<div>
+		<p>Try It Yourself!</p>
+		<p>We've included all code in this concept in the following repo: <a href="https://github.com/udacity/FSND/tree/master/FlaskRecap">https://github.com/udacity/FSND/tree/master/FlaskRecap</a></p>
+		<p>Try the following:</p>
+
+		<p><input type="checkbox">Clone the Repo and follow the README instructions for set up</p>
+		<p><input type="checkbox">Run the Flask Server</p>
+		<p><input type="checkbox">Download and install <a href="https://www.postman.com/">Postman</a></p>
+		<p><input type="checkbox">Import and Run the Postman Collection</p>
+	</div>
+
+	<hr>
+
+	<h2>3. Recap - SQLAlchemy</h2>
+
+	<h3>Recap - Databases and SQLAlchemy</h3>
+
+	<p>Recap - The material covered in this concept is a refresher and should not be new. If you've never seen this material before, it may be wise to look back on a previous course on Python, Structured Query Language (SQL) for Relational Databases, or SQLAlchemy.</p>
+
+	<h4>Storing Persistent Data</h4>
+
+	<p>We often need to store data from session to session. This is most commonly done using a dedicated system called a <a href="https://en.wikipedia.org/wiki/Database">Database</a>. Within this course, we'll use a tool called <a href="https://www.sqlalchemy.org/">SQLAlchemy</a> which is an Object Relational Mapper (ORM) to interface with a simple SQLLite3 database using a few lines of code.</p>
+
+	<iframe width="720" height="480" src="https://www.youtube.com/embed/zVZaKDSKH04" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+	<p>Try It Yourself!</p>
+
+	<p>We've included a notebook below for you to define and play with models in SQLAlchemy.</p>
+
+	<p>Remember any text with dotted underlines in the notebook include a recording to help you understand. Hover over and click play movie to hear this recording!</p>
+
+	<a href="https://r848940c859124xjupyterwm1h12hi.udacity-student-workspaces.com/notebooks/SQLAlchemy.ipynb">Python Notebook</a>
+
+	<div>
+		<p>QUIZ QUESTION</p>
+		<p>The notebook above includes an SQLite database file called database.db in the same directory as the notebook.</p>
+		<p>Use this database file and the code provided to load the correct database file and find the password for the username Abe.</p>
+		<p>Tip: make sure you execute the first code block in the notebook to copy the stubbed database file.</p>
+		<p>What is Abe's password:</p>
+		<p><input type="checkbox">codeallday</p>
+		<p><input type="checkbox">learnmoreskills</p>
+		<p><input type="checkbox">badpassword</p>
+	</div>
+
+	<hr>
+
+	<h2>3. Recap - Python Decorators</h2>
+
+	<h3>Recap - Python Decorators</h3>
+
+	<p>
+	Recap - The material covered in this concept is a refresher and should not be new. It covers some advanced Python that you may have forgotten. If you're new to Python, it may be wise to look back on a previous course on Python before continuing.	
+	</p>
+	
+	<iframe width="720" height="480" src="https://www.youtube.com/embed/ghved6sS1hI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+	<p>Try It Yourself!</p>
+	<p>We've included a notebook for you to define and use simple decorators.</p>
+	<p>Remember any text with dotted underlines in the notebook include a recording to help you understand. Hover over and click play movie to hear this recording!</p>
+
+	<a href="https://r848940c859124xjupyterwm1h12hi.udacity-student-workspaces.com/notebooks/Decorators.ipynb">Python Notebook</a>
+
+	<br><br><hr>
+
+	<h2>Lesson 2: Identity and Authentication</h2>
+
+	<h2>1. Lesson Intro</h2>
+
+	<h3>Identity and Authentication</h3>
+
+	<h4>Who are you?</h4>
+
+	<iframe width="720" height="480" src="https://www.youtube.com/embed/sO8jC0E4QY4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+	<h4>Authentication in the Digital World</h4>
+
+	<p>Let's look at a brief overview of the concepts we'll be covering. If you don't understand all of the details given in this video at this stage, don't worry—we're going to go over all of this in much greater detail throughout the lesson!</p>
+
+	<iframe width="720" height="480" src="https://www.youtube.com/embed/Y1X9yupVhG8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+	<hr>
+
+	<h2>2. Common Authentication Methods</h2>
+
+	<h3>Common Authentication Methods</h3>
+
+	<h4>Username and Passwords</h4>
+
+	<p>This is the most common method of identifying users in the age of Software as a Service (Saas).</p>
+
+	<iframe width="720" height="480" src="https://www.youtube.com/embed/Ccm4wie8qlA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+	<h4>HTTP Status Codes</h4>
+
+	<p>Two status codes which are important throughout this course are:</p>
+
+	<ul>
+		<li>401 Unauthorized</li>
+		<p>The client must pass authentication before access to this resource is granted. The server cannot validate the identity of the requested party.</p>
+		<li>403 Forbidden</li>
+		<p>The client does not have permission to access the resource. Unlike 401, the server knows who is making the request, but that requesting party has no authorization to access the resource.</p>
+	</ul>
+	
+	<p>For a complete list of status codes, check out the <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status">MDN Web Docs</a></p>
+
+	<h4>Brief Intro to Problems with Passwords</h4>
+
+	<iframe width="720" height="480" src="https://www.youtube.com/embed/i2PQhJpb_OI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+	<p>As we discussed in the video, some issues with passwords are <bold> outside of our control </bold> as developers. Many issues come from user behavior that we cannot directly influence, such as:</p>
+
+	<ul>
+		<li>Users forget their passwords</li>
+		<li>Users use simple passwords</li>
+		<li>Users use common passwords</li>
+		<li>Users repeat passwords</li>
+		<li>Users share passwords</li>
+	</ul>
+
+	<p>In contrast, some issues are <bold> within our control </bold> as developers:</p>
+
+	<ul>
+		<li>Passwords can be compromised</li>
+		<li>Developers can incorrectly check</li>
+		<li>Developers can cut corners</li>
+	</ul>
+
+	<hr>
+
+	<h2>3. Alternative Authentication Methods</h2>
+
+	<h3>Alternative Authentication Methods</h3>
+
+	<h4>Single Sign-On (SSO)</h4>
+
+	<iframe width="720" height="480" src="https://www.youtube.com/embed/BYSKdCi7hUg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+	<h4>Multi-Factor Authentication</h4>
+
+	<iframe width="720" height="480" src="https://www.youtube.com/embed/LbbOQBZgRlU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+	<h4>Passwordless</h4>
+
+	<iframe width="720" height="480" src="https://www.youtube.com/embed/OCSFMzd6SX0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+	<h4>Biometric Authentication</h4>
+
+	<iframe width="720" height="480" src="https://www.youtube.com/embed/gSm18eliZ1E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+	<h4>A Friendly Reminder of Risk</h4>
+
+	<iframe width="720" height="480" src="https://www.youtube.com/embed/4ZkB1OKkczw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+	<p>These alternative methods are not sure proof. As with all systems presented, there are always still risks associated with the method. For example, multi-factor auth has and continues to be thwarted with malicious apps on android which used to be able to read SMS messages. Once this vulnerability was discovered, Google changed the permission system to access these messages. However, the adversaries found a new exploit, by <a href="https://www.welivesecurity.com/2019/06/17/malware-google-permissions-2fa-bypass/">reading the message in the notification bar</a>. By combining these methods, and thinking about the most critical parts of the system, you as the developer can minimize risk - but never truly eliminate it.</p>
+
+	<h4>Additional Readings:</h4>
+
+	<ul>
+		<li><a href="https://oauth.net/2/">Oath2</a></li>
+		<li><a href="https://auth0.com/docs/identityproviders">Auth0 Identity Providers</a></li>
+		<li><a href="https://developers.google.com/identity/">Google Identity Platform</a></li>
+		<li><a href="https://hackernoon.com/magic-links-d680d410f8f7">Magic Links</a></li>
+		<li><a href="https://developer.apple.com/documentation/localauthentication">iOS Biometrics</a></li>
+		<li><a href="https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&hl=en_US">Google Authenticator</a></li>
+		<li><a href="https://www.youtube.com/watch?v=VgC4b9K-gYU&feature=youtu.be">Dance Dance Authentication</a>(Enjoy :))</li>
+	</ul>
+
+	<hr>
+
+	<h2>4. Third-Party Auth Systems</h2>
+
+	<h3>Third-Party Auth Systems</h3>
+
+	<h4>Why Delegate the Responsibility?</h4>
+
+	<iframe width="720" height="480" src="https://www.youtube.com/embed/BBkQ_9SSa88" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+	<div>
+		<p>Quiz Question</p>
+		<p>True or False: Working with 3rd party auth system <bold>eliminates</bold> security risks:</p>
+		<p><input type="checkbox" name="">True</p>
+		<p><input type="checkbox" name="">False</p>
+	</div>
+
+	<h4>Common Auth Services:</h4>
+
+	<ul>
+		<li><a href="https://auth0.com/">Auth0</a>(We'll be using this throughout the course!)</li>
+		<li><a href="https://aws.amazon.com/cognito/">AWS Cognito</a></li>
+		<li><a href="https://firebase.google.com/docs/auth">Firebase Auth/a></li>
+		<li><a href="https://www.okta.com/">Okta</a></li>
+	</ul>
+
+	<hr>
+
+	<h2>5. Implementing Auth0</h2>
+
+	<h3>Implementing Auth0</h3>
+
+	<h4>Why Delegate the Responsibility?</h4>
+
+	<p>Follow along with the set up at <a href="https://auth0.com/">Auth0.com</a>!</p>
+
+	<iframe width="720" height="480" src="https://www.youtube.com/embed/Mikr9g_JBaE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+	<h4>Using the Auth0 Authorization Code Flow with Hosted Login Pages</h4>
+
+	<iframe width="720" height="480" src="https://www.youtube.com/embed/_Fb0HKn0U2I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+	<h4>Auth0 Authorize Link</h4>
+
+	<p>The complete documentation for the authorization code flow can be found in <a href="https://auth0.com/docs/api/authentication#authorize-application">Auth0's Documentation</a>. It may help to fill in the url in the textbox below before copying it into your browser:</p>
+
+	<textarea>https://{{YOUR_DOMAIN}}/authorize?audience={{API_IDENTIFIER}}&response_type=token&client_id={{YOUR_CLIENT_ID}}&redirect_uri={{YOUR_CALLBACK_URI}}</textarea>
+
+	<h4>Integrating Auth0 With Your Frontend</h4>
+
+	<p>To integrate Auth0 with your frontend you simply need to redirect your user to your Auth0 hosted login page and include a url to redirect them to upon completion. This can be done using a simple html anchor link:</p>
+
+	<span><a href="{{AUTH0_AUTHORIZE_URL}}">Login<a></span>
+
+	<p>For a more seamless user experience, you can (and should) set up a custom domain on Auth0 by following the instructions in their <a href="https://auth0.com/docs/custom-domains">docs</a>. This is also a good idea to minimize the risk of <a href="https://en.wikipedia.org/wiki/Phishing">Phishing Attacks</a> by ensuring that your users do not accidentally enter their credentials into a login form that just looks like yours.</p>
+
+	<div>
+		<h6>Try it yourself!</h6>
+		<p>Follow these steps to set up a new Auth0 Account</p>
+		<div>
+			<p><input type="checkbox" name="">Signup for a new account on <a href="https://auth0.com/">auth0.com</a></p>
+			<p><input type="checkbox" name="">Create a new Regular Web Application</p>
+			<p><input type="checkbox" name="">Configure the Application Settings</p>
+			<p><input type="checkbox" name="">Test out your Application Endpoint</p>
+		</div>
+	</div>
+
+	<h4>Alternative Authentication Methods in Auth0</h4>
+
+	<iframe width="720" height="480" src="https://www.youtube.com/embed/ODZiEI2rJwA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+</body>
+</html>

@@ -6,20 +6,7 @@
 
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-	<style type="text/css">
-		body {
-			margin: 10px 50px 10px 50px;
-			padding: auto;
-		}
-
-		#full-stack-web {
-			width: 20rem;
-		}
-
-		#full-stack-web:hover {
-			cursor: pointer;
-		}
-	</style>
+	<link rel="stylesheet" type="text/css" href="./assets/css/styles.css">
 </head>
 <body>
 	<nav class="navbar navbar-light">
@@ -33,8 +20,8 @@
 		<h3 style="text-align: center;">Explore our Nanodegree programs to find a perfect match</h2>
 	</div>
 	<br>
-	<div class="container" >
-		<div class="card" id="full-stack-web">
+	<div class="container">
+		<div class="card nanodegree" id="full-stack-web">
 	  		<img class="card-img-top" src="./assets/img/full_stack_catalog_image.webp" alt="Card image cap">
 	  		<div class="card-body">
 	    		<p class="card-text" style="font-weight: bold; font-size: 20px;">Full Stack Web Developer</p>
@@ -43,12 +30,26 @@
     			<span style="font-size: 14px;">4 months at 5-10 hrs/week</span> 
 	  		</div>
 		</div>
+		<div class="card nanodegree" id="react-dev">
+	  		<img class="card-img-top" src="./assets/img/react_catalog_image.jpg" alt="Card image cap">
+	  		<div class="card-body">
+	    		<p class="card-text" style="font-weight: bold; font-size: 20px;">React Developer</p>
+    			<span style="letter-spacing: 4px; text-transform: uppercase;">Estimated Time</span> 
+    			<br>
+    			<span style="font-size: 14px;">4 months at 5-10 hrs/week</span> 
+	  		</div>
+		</div>
+		<div class="card nanodegree" id="machine-learning">
+	  		<img class="card-img-top" src="./assets/img/machine_learning_catalog.jpg" alt="Card image cap">
+	  		<div class="card-body">
+	    		<p class="card-text" style="font-weight: bold; font-size: 20px;">Machine Learning Engineer</p>
+    			<span style="letter-spacing: 4px; text-transform: uppercase;">Estimated Time</span> 
+    			<br>
+    			<span style="font-size: 14px;">3 months at 5-10 hrs/week</span> 
+	  		</div>
+		</div>
 	</div>
-	
-	<script type="text/javascript">
-		document.getElementById('full-stack-web').onclick = function () {
-			window.location.href = 'webdev/index.html';
-		}
-	</script>
+
+	<script type="text/javascript" src="./assets/js/script.js"></script>
 </body>
 </html>

@@ -1,0 +1,14 @@
+body {
+	margin: 10px 50px 10px 50px;
+	padding: auto;
+}
+
+.nanodegree {
+	width: 20rem;
+	float: left;
+	margin-left: 12px;
+}
+
+#full-stack-web:hover, #react-dev:hover, #machine-learning:hover {
+	cursor: pointer;
+}

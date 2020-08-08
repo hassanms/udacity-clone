@@ -1,2 +1,2 @@
-# udacity-clone
+# Clocity
 A Udacity clone freebie hunters
